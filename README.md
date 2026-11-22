@@ -6,6 +6,16 @@ MeshCore Direct Map zeigt auf einer lokalen Browser-Karte, **wo** ein Empfänger
 
 ## Deutsch
 
+### Demo
+
+**Plugin-Einstellungen in OnAir:** Hier ist eine feste Empfängerposition aus OnAir gewählt; ein GPS-Fix liegt im Beispiel nicht vor.
+
+![MeshCore Direct Map im OnAir-Plugin-Manager mit gewählter fester Position](docs/images/onair-plugin-einstellungen.png)
+
+**Browser-Karte im Simulationsmodus:** Alle gezeigten Punkte und Pegel sind erfunden. Kartenkacheln © OpenStreetMap-Mitwirkende.
+
+![MeshCore Direct Map mit farbigen, erfundenen Punkten auf der Browser-Karte](docs/images/simulation-karte.png)
+
 ### Herunterladen und installieren
 
 Die [Plugin-Datei direkt herunterladen](https://github.com/g3orgs/meshcore-direct-map/releases/download/v0.3.1/meshcore-direct-map-0.3.1.onairplugin). Sie liegt auch unter [Releases → v0.3.1 → Assets](https://github.com/g3orgs/meshcore-direct-map/releases/tag/v0.3.1) als **eine** Datei namens `meshcore-direct-map-0.3.1.onairplugin`.
@@ -38,6 +48,8 @@ OnAir 4.4.0 übergibt an Action-Plugins SNR, aber keinen gemessenen Empfangspege
 Weitere Details stehen in der [deutschen Kurzanleitung](KURZANLEITUNG-DE.md).
 
 ## English
+
+The [demo screenshots](#demo) above show the OnAir settings and a map with entirely fictional simulation points.
 
 This OnAir 4.4.0 action plugin reads `lora.packet` events directly. It filters MeshCore `GRP_TXT` packets with a configurable channel hash (default `01`) and an empty flood path. An empty path is a **direct reception candidate**, not proof of a transmitter's identity. `log-to-file` is not needed.
 
