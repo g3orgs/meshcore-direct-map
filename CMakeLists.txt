@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 3.16)
+project(meshcore_direct_map LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+include(${CMAKE_CURRENT_SOURCE_DIR}/sdk/cmake/OnAirPlugin.cmake)
+onair_add_plugin(meshcore-direct-map
+  SOURCES src/plugin.cpp src/map_server.cpp
+  INCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/sdk/include)
+if(UNIX AND NOT APPLE)
+  target_link_libraries(plugin_meshcore_direct_map PRIVATE pthread)
+endif()
+
+enable_testing()
+add_executable(frame_test tests/frame_test.cpp)
+target_include_directories(frame_test PRIVATE src)
+add_test(NAME frame_test COMMAND frame_test)
+add_executable(plugin_test tests/plugin_test.cpp)
+target_include_directories(plugin_test PRIVATE sdk/include src)
+target_link_libraries(plugin_test PRIVATE plugin_meshcore_direct_map)
+add_test(NAME plugin_test COMMAND plugin_test)
+add_executable(map_server_test tests/map_server_test.cpp src/map_server.cpp)
+target_include_directories(map_server_test PRIVATE src)
+target_link_libraries(map_server_test PRIVATE pthread)
+add_test(NAME map_server_test COMMAND map_server_test)
+set_tests_properties(map_server_test PROPERTIES SKIP_RETURN_CODE 77)

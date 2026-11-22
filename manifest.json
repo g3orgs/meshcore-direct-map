@@ -1,0 +1,22 @@
+{
+  "id": "meshcore-direct-map",
+  "name": "MeshCore Direct Map",
+  "version": "0.3.1",
+  "author": "DM1OK",
+  "license": "MIT",
+  "description": "Live-Karte mit GPS oder wählbarer fester Empfängerposition aus OnAir oder manuellen Koordinaten. Im Browser http://127.0.0.1:8765/ öffnen; die tatsächliche URL steht im Plugin-Protokoll.",
+  "kind": "action",
+  "abi_version": 1,
+  "minimum_onair": "4.4.0",
+  "library": {"linux": "meshcore-direct-map.so"},
+  "permissions": ["filesystem", "network"],
+  "settings": [
+    {"key": "channel_hash", "label": "Channel hash (two hex digits)", "type": "text", "default": "01"},
+    {"key": "simulate", "label": "Simulation (fictional packets and GPS)", "type": "checkbox", "default": false},
+    {"key": "use_static_position", "label": "Statische Position verwenden (GPS ignorieren)", "type": "checkbox", "default": false},
+    {"key": "static_position_source", "label": "Quelle der statischen Position", "type": "combo", "options": ["Aus OnAir übernehmen", "Manuell eintragen"], "default": 0},
+    {"key": "static_lat", "label": "Manuelle Breite (Grad, Dezimalpunkt)", "type": "text", "default": ""},
+    {"key": "static_lon", "label": "Manuelle Länge (Grad, Dezimalpunkt)", "type": "text", "default": ""},
+    {"key": "map_port", "label": "Local map port", "type": "text", "default": "8765"}
+  ]
+}

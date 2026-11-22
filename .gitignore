@@ -1,0 +1,22 @@
+# Build and release output
+/build/
+/build-*/
+/dist/
+*.onairplugin
+
+# Local upstream checkout and experiments
+/onair-upstream/
+/patches/
+/github-ready/
+
+# Receiver data must not be published
+/data/
+**/direct-packets*.csv
+**/events.log
+
+# Local tooling
+__pycache__/
+*.py[cod]
+.venv/
+.idea/
+.vscode/
