@@ -1,13 +1,13 @@
 {
   "id": "meshcore-direct-map",
   "name": "MeshCore Direct Map",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": "DM1OK",
   "license": "MIT",
   "description": "Live-Karte mit GPS oder wählbarer fester Empfängerposition aus OnAir oder manuellen Koordinaten. Im Browser http://127.0.0.1:8765/ öffnen; die tatsächliche URL steht im Plugin-Protokoll.",
   "kind": "action",
   "abi_version": 1,
-  "minimum_onair": "4.4.0",
+  "minimum_onair": "4.3.0",
   "library": {"linux": "meshcore-direct-map.so"},
   "permissions": ["filesystem", "network"],
   "settings": [

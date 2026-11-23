@@ -1,13 +1,13 @@
 # MeshCore Direct Map – Kurzanleitung
 
-**Testversion 0.3.1 für OnAir 4.4.0 unter Linux x86-64** · Autor: DM1OK
+**Testversion 0.3.2 für OnAir 4.3.0 oder neuer unter Linux x86-64** · Autor: DM1OK
 
 Das Plugin zeichnet Empfangsorte von MeshCore-Gruppenpaketen mit leerem Hop-Pfad auf einer lokalen Browser-Karte. Ein leerer Pfad ist ein Hinweis auf direkten Empfang, aber kein sicherer Nachweis für den ursprünglichen Sender. Zum Installieren brauchst du keinen Compiler und das Beispiel-Plugin „Log to file“ muss nicht laufen.
 
 ## Installation
 
 1. Öffne in OnAir **Einstellungen → Plug-ins und Skripte → Plug-ins öffnen…**.
-2. Wähle im Reiter **Installiert** die Schaltfläche **Aus Datei installieren…** und öffne `meshcore-direct-map-0.3.1.onairplugin`.
+2. Wähle im Reiter **Installiert** die Schaltfläche **Aus Datei installieren…** und öffne `meshcore-direct-map-0.3.2.onairplugin`.
 3. Wähle **MeshCore Direct Map** aus, erlaube **Netzwerk** und **Dateien** und setze den Haken bei **Aktiviert**.
 4. Trage bei **Channel hash** den gewünschten Kanal-Hash als **genau zwei Hex-Ziffern** ein, zum Beispiel `01` oder `D9`. Der Wert muss zu deinem MeshCore-Kanal passen.
 
@@ -46,4 +46,4 @@ Zum Ausprobieren ohne GPS kannst du stattdessen `BEISPIEL-FIKTIV.csv` aus dem Pl
 - Prüfe Kanal-Hash, laufenden MeshCore-Empfang und entweder einen GPS-Fix oder eine gültige feste Position. Weitergeleitete Pakete mit Hops erzeugen keinen Kartenpunkt.
 - Für Kartenkacheln und die Kartenbibliothek braucht der Browser eine Internetverbindung. Die Messdaten selbst bleiben auf deinem Rechner; der Kartenanbieter erhält die üblichen Kachelanfragen.
 
-**Hinweis zur Messung:** Mit unverändertem OnAir 4.4.0 färbt die Karte Punkte nach **SNR**, nicht nach Empfangsleistung. SNR eignet sich nur als vorläufiger Qualitätswert. Für vergleichbare Fahrmessungen Antenne, Ausrichtung, Empfängerverstärkung und Funkparameter möglichst konstant halten.
+**Hinweis zur Messung:** Mit unverändertem OnAir 4.3 bis 4.5 färbt die Karte Punkte nach **SNR**, nicht nach Empfangsleistung. SNR eignet sich nur als vorläufiger Qualitätswert. Für vergleichbare Fahrmessungen Antenne, Ausrichtung, Empfängerverstärkung und Funkparameter möglichst konstant halten.

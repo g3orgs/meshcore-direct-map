@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.2 — 2026-11-23
+
+- Lowered the minimum OnAir version to 4.3.0. The official 4.3.0 and 4.5.0 sources use the same plugin ABI and `lora.packet` event fields required by this plugin.
+- Updated the installation guidance and package version. No packet filtering or map behavior changed.
+
 ## 0.3.1 — 2026-11-22
 
 - Added an explicit switch to use a fixed receiver position instead of GPS.

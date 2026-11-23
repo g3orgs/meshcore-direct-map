@@ -36,7 +36,7 @@ inline std::string onAirSettingsPath() {
     return home && *home ? std::string(home) + "/.config/onair/settings.conf" : std::string();
 }
 
-// OnAir 4.4.0 has no station-location getter in its plugin ABI. This reads its
+// OnAir 4.3-4.5 have no station-location getter in the plugin ABI. This reads the
 // Linux preference file only when the user selects the explicit OnAir fallback.
 inline bool readOnAirStationPosition(StationPosition& out) {
     const std::string path = onAirSettingsPath();
